@@ -2,3 +2,5 @@ bundle-mahasiswa/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+# Python virtual environment
+.venv/
