@@ -1,29 +1,41 @@
-# M1: Baseline pencarian lintas modal (Kelompok 09)
+# M1 · Baseline Pencarian Lintas Modal
+IF25-40304 Pembelajaran Mesin Multimodal · Ganjil 2026/2027 · Kelompok 09 (vegapunk)
 
-IF25-40304 Pembelajaran Mesin Multimodal, ITERA
+Baseline pencarian gambar↔teks (Indonesia dan Inggris) pada SEA-VL Indonesian subset
+dengan encoder pra-latih yang dibekukan, tanpa pelatihan, berjalan di CPU.
+
+## Isi arsip
+- `m1_baseline.ipynb` : kode end-to-end, sudah dijalankan (semua output tersimpan)
+- `README.md` : berkas ini
+- `⟦audit_data.py⟧` : kode audit duplikat dan leakage (peran 1)
+- `hasil/` : `val_empat_arah.csv`, `contoh_query_train.csv`
+
+## Prasyarat
+- Python 3.10+ (dijalankan pada 3.12.10)
+- `pip install numpy torch transformers sentence-transformers pillow pandas ipython jupyter`
+- Versi saat dijalankan: numpy 2.5.4, torch 2.15.0+cpu, sentence-transformers 6.3.0
+- Bundel data dari LMS (`train.csv`, `val.csv`, `images/`). Tidak disertakan di arsip.
 
 ## Cara menjalankan
+1. Letakkan bundel data di `../bundle-mahasiswa` (relatif terhadap notebook),
+   atau ubah variabel `DIR` di sel kode pertama.
+2. Jalankan: `jupyter nbconvert --to notebook --execute m1_baseline.ipynb`
+   (atau buka notebook lalu Run All).
+3. Hasil mentah ditulis ke `hasil/`, embedding ke `cache/`.
 
-1. Atur `DIR` di notebook ke folder bundel SEA-VL (berisi `train.csv`, `val.csv`, `images/`); default `../bundle-mahasiswa`. `cache/` dan `hasil/` dibuat di folder notebook.
-2. Dependensi dipasang oleh sel pertama (`%pip install ...`), atau manual: `pip install numpy torch transformers sentence-transformers pillow pandas jupyter`
-3. Buka notebook, **Run All** (atau `jupyter nbconvert --to notebook --execute --inplace m1_baseline.ipynb`).
-4. Hanya CPU. Embedding disimpan di `cache/` (hapus folder ini untuk mengukur waktu jalan dari cache kosong).
+## Seed dan waktu
+- Seed: 42 (`SEED` di sel kode pertama). Embedding bersifat deterministik; seed
+  menentukan pemilihan 10 contoh query dan bootstrap CI (1000 resample).
+- Waktu embedding dari cache kosong: ±376 detik (±6,3 menit) di CPU 12 core,
+  belum termasuk unduhan model dari Hugging Face.
 
-## Isi
-
-- Encoder gambar dan teks Inggris: `sentence-transformers/clip-ViT-B-32` (beku)
-- Encoder teks Indonesia: `sentence-transformers/clip-ViT-B-32-multilingual-v1` (beku)
-- Kesamaan kosinus pada embedding ternormalisasi, empat arah: gambar→teks ID, gambar→teks EN, teks ID→gambar, teks EN→gambar
-- Metrik: Recall@1/5/10 dan mAP@10 pada `val.csv` (satu jawaban benar per query; skor sama dihitung pesimistik), plus CI 95% bootstrap untuk R@1
-- Sepuluh contoh query Indonesia diambil acak dari `train.csv`, bukan dari val
-
-## Seed dan keluaran
-
-- Seed: 42 (NumPy, PyTorch, sampel contoh, bootstrap)
-- `hasil/val_empat_arah.csv`: tabel hasil validasi
-- `hasil/contoh_query_train.csv`: sepuluh contoh query
-- `cache/*.npy`, `cache/waktu.json`: embedding dan waktu komputasi
+## Aturan yang dipatuhi
+Encoder dibeku; tidak ada data di luar bundel; hiperparameter dan contoh query hanya
+dari `train.csv`; `val.csv` hanya untuk tabel hasil.
 
 ## Atribusi data
-
-SEA-VL Indonesian subset (KORIKA-AI/sea-vl_crowdsourcing_id), diturunkan dari SEACrowd/sea-vl_crowdsourcing, lisensi CC BY-SA 4.0. Cahyawijaya et al. (2025), _Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia_, ACL.
+SEA-VL Indonesian subset (KORIKA-AI/sea-vl_crowdsourcing_id), diturunkan dari
+SEACrowd/sea-vl_crowdsourcing, lisensi CC BY-SA 4.0
+(creativecommons.org/licenses/by-sa/4.0). Cahyawijaya et al. (2025),
+*Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language
+Dataset for Southeast Asia*, ACL.
