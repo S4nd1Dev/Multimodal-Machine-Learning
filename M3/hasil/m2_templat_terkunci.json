@@ -1,0 +1,36 @@
+{
+ "sha256": "925c741c4eecad8db07c76e785cf03c3e8442c1493f608f8c1881afc5b67fdc0",
+ "waktu_kunci": "2026-11-14T21:38:52",
+ "konfig": {
+  "NETRAL": [
+   "Foto: {c}",
+   "Sebuah foto. {c}",
+   "Gambar ini memperlihatkan: {c}",
+   "Foto dengan keterangan: {c}",
+   "{c} (foto)",
+   "Foto yang menggambarkan hal berikut. {c}"
+  ],
+  "BUDAYA": [
+   "Foto budaya Indonesia: {c}",
+   "Dokumentasi tradisi dan budaya nusantara: {c}",
+   "Foto yang diambil di Indonesia. {c}",
+   "Foto warisan budaya Indonesia dengan keterangan: {c}",
+   "Budaya Indonesia: {c}",
+   "Foto tentang adat, seni, dan kuliner khas Indonesia. {c}"
+  ],
+  "TERJEMAHAN": {
+   "model": "facebook/nllb-200-distilled-600M",
+   "src": "ind_Latn",
+   "tgt": "eng_Latn",
+   "num_beams": 4,
+   "max_new_tokens": 160
+  },
+  "BOBOT_V2": {
+   "A_budaya": 1.0,
+   "B_terjemahan": 1.0
+  },
+  "seed": 42,
+  "IMG_MODEL": "sentence-transformers/clip-ViT-B-32",
+  "TXT_MODEL": "sentence-transformers/clip-ViT-B-32-multilingual-v1"
+ }
+}

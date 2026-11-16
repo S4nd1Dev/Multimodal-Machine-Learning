@@ -1,0 +1,6 @@
+Varian,Waktu (dtk),Encode teks per caption,Penerjemah saat query,Per caption (ms),Parameter dilatih
+V0,,1,tidak,,0
+V1,68.3,6,tidak,248.36,0
+V2a,77.0,6,tidak,280.0,0
+V2b,1782.9,1,ya (NLLB 600M),6483.27,0
+V2,1859.9,7,ya (NLLB 600M),6763.27,0

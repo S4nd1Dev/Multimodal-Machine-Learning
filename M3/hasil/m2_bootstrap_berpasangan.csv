@@ -1,0 +1,29 @@
+Arah,Perbandingan,Metrik,Selisih,CI95 bawah,CI95 atas,Meyakinkan?
+teks ID → gambar,V1 − V0,R@1,0.0145,-0.0109,0.04,belum meyakinkan
+teks ID → gambar,V1 − V0,mAP@10,0.0076,-0.009,0.0237,belum meyakinkan
+teks ID → gambar,V2a − V0,R@1,-0.0545,-0.0945,-0.0182,ya
+teks ID → gambar,V2a − V0,mAP@10,-0.0669,-0.0943,-0.04,ya
+teks ID → gambar,V2b − V0,R@1,0.1127,0.0618,0.1636,ya
+teks ID → gambar,V2b − V0,mAP@10,0.1395,0.0937,0.1846,ya
+teks ID → gambar,V2 − V0,R@1,0.0436,0.0036,0.0836,ya
+teks ID → gambar,V2 − V0,mAP@10,0.0565,0.0244,0.0887,ya
+teks ID → gambar,V2 − V1,R@1,0.0291,-0.0073,0.0655,belum meyakinkan
+teks ID → gambar,V2 − V1,mAP@10,0.0489,0.0188,0.0819,ya
+teks ID → gambar,V2 − V2a,R@1,0.0982,0.0582,0.1418,ya
+teks ID → gambar,V2 − V2a,mAP@10,0.1234,0.0906,0.1596,ya
+teks ID → gambar,V2 − V2b,R@1,-0.0691,-0.1091,-0.0291,ya
+teks ID → gambar,V2 − V2b,mAP@10,-0.0831,-0.1146,-0.0523,ya
+gambar → teks ID,V1 − V0,R@1,0.0145,-0.0182,0.0401,belum meyakinkan
+gambar → teks ID,V1 − V0,mAP@10,0.0103,-0.0102,0.0292,belum meyakinkan
+gambar → teks ID,V2a − V0,R@1,-0.0109,-0.0509,0.0218,belum meyakinkan
+gambar → teks ID,V2a − V0,mAP@10,0.0148,-0.0135,0.043,belum meyakinkan
+gambar → teks ID,V2b − V0,R@1,0.12,0.0618,0.1745,ya
+gambar → teks ID,V2b − V0,mAP@10,0.1624,0.1175,0.2048,ya
+gambar → teks ID,V2 − V0,R@1,0.1418,0.0909,0.1855,ya
+gambar → teks ID,V2 − V0,mAP@10,0.1663,0.1267,0.2053,ya
+gambar → teks ID,V2 − V1,R@1,0.1273,0.0764,0.1745,ya
+gambar → teks ID,V2 − V1,mAP@10,0.156,0.117,0.1953,ya
+gambar → teks ID,V2 − V2a,R@1,0.1527,0.1018,0.2001,ya
+gambar → teks ID,V2 − V2a,mAP@10,0.1515,0.1143,0.1869,ya
+gambar → teks ID,V2 − V2b,R@1,0.0218,-0.0218,0.0655,belum meyakinkan
+gambar → teks ID,V2 − V2b,mAP@10,0.0039,-0.0258,0.0312,belum meyakinkan

@@ -1,0 +1,11 @@
+Varian,Arah,R@1 val penuh,R@1 val bersih,selisih
+V0,teks ID → gambar,0.1964,0.1977,0.0014
+V0,gambar → teks ID,0.2145,0.2129,-0.0016
+V1,teks ID → gambar,0.2109,0.2167,0.0058
+V1,gambar → teks ID,0.2291,0.2357,0.0067
+V2a,teks ID → gambar,0.1418,0.1445,0.0027
+V2a,gambar → teks ID,0.2036,0.2053,0.0017
+V2b,teks ID → gambar,0.3091,0.3118,0.0027
+V2b,gambar → teks ID,0.3345,0.3422,0.0077
+V2,teks ID → gambar,0.24,0.2471,0.0071
+V2,gambar → teks ID,0.3564,0.3726,0.0163

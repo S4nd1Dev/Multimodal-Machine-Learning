@@ -1,0 +1,7 @@
+Konfigurasi,Arah,R@1 (semua templat),LOO rerata,LOO simpangan baku,LOO min,LOO maks
+V1 (netral),teks ID → gambar,0.2109,0.2109,0.0051,0.2036,0.2182
+V1 (netral),gambar → teks ID,0.2291,0.2261,0.0043,0.2182,0.2291
+V2a (budaya),teks ID → gambar,0.1418,0.1418,0.0092,0.1273,0.1527
+V2a (budaya),gambar → teks ID,0.2036,0.2055,0.005,0.1964,0.2109
+V2 (budaya+terjemahan),teks ID → gambar,0.24,0.2412,0.0038,0.2364,0.2473
+V2 (budaya+terjemahan),gambar → teks ID,0.3564,0.3527,0.0046,0.3491,0.36
