@@ -1,0 +1,6 @@
+Tipe,Split,Caption asli,Versi salah,V0 P(asli|gambar),V0 P(gambar_i|query asli),V0 P(gambar_i|query salah),V0 top-1 gambar (query salah),V2b P(asli|gambar),V2b P(gambar_i|query asli),V2b P(gambar_i|query salah),V2b top-1 gambar (query salah)
+negasi,val,Persawahan khas Bali dengan bangunan gubuk atau kubu,Persawahan khas Bali tanpa bangunan gubuk atau kubu,0.207,0.006,0.034,3,0.314,0.083,0.25,3
+atribut,val,"Potongan kue lapis legit, yang dikenal dengan lapisan-l","Potongan kue lapis legit, yang dikenal dengan lapisan-l",0.77,1.0,1.0,2,0.706,1.0,1.0,2
+budaya,val,Seorang wanita sedang berfoto di sekitar area Candi Ulu,Seorang wanita sedang berfoto di sekitar area Candi Ulu,0.934,1.0,0.992,3,0.503,1.0,1.0,3
+relasi,val,"Semangkuk soto tegal, di atas taplak meja yang bergamba","Semangkuk soto tegal, di bawah taplak meja yang bergamb",0.408,0.897,0.966,4,0.569,0.982,0.983,4
+objek,val,Warung soto lamongan di dekat Stasiun Pocin,Warung nasi lamongan di dekat Stasiun Pocin,0.671,0.947,0.419,1,1.0,0.999,0.0,1
